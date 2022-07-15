@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from 'react'
 import NewsList from '../components/news/NewsList'
+import useFetch from '../useFetch'
 
 const News = () => {
-    const [news, setNews] = useState(null);
-
-    useEffect(()=>{
-        fetch('http://localhost:8000/news')
-        .then(res => {
-            return res.json()
-            .then(data => {
-                setNews(data)
-            })
-        })
-    }, [])
+    const { data: news } = useFetch('http://localhost:8000/news')
 
     return (
         <div>
