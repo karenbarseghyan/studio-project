@@ -9,6 +9,7 @@ const NewsList = ({news, search, title}) => {
             {news.filter((news)=>news.title.toLowerCase().includes(search)).map((news)=> (
                 <div  key={news.id}> 
                 <Link to={`/news/${news.id}`}>
+                    <img src={news.image} alt="news" height="100px" />
                     <h3>{news.title}</h3>
                     <p>{news.description}</p>
                 </Link>  
