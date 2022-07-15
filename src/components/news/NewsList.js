@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const NewsList = ({news, title}) => {
     console.log(news)
@@ -7,8 +8,10 @@ const NewsList = ({news, title}) => {
             <h1>{title}</h1>
             {news.map((news)=> (
                 <div  key={news.id}> 
+                <Link to={`/news/${news.id}`}>
                     <h3>{news.title}</h3>
                     <p>{news.description}</p>
+                </Link>  
                 </div>
             ))}
         </div>

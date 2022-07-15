@@ -1,4 +1,5 @@
 import { Route, Routes }  from "react-router-dom"
+import NewsDetails from "./components/news/NewsDetails";
 import Navbar from "./Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -13,6 +14,7 @@ function App() {
         <Route exact path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/news" element={<News />}/>
+        <Route path="/news/:id" element={<NewsDetails />}/>
         <Route path="/profile" element={<Profile />}/>
       </Routes>
     </div>
