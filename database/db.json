@@ -1,0 +1,9 @@
+{
+    "news" : [
+            { "image": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/GH7FPMH2WEI6ZM45OEYJC2ABJM.jpg&w=1440", "title": "Fakenews1", "description": "Khans ability to follow", "id": 1}, 
+            { "image": "https://images.thespinoff.co.nz/1/2022/07/luxon-pol-exch.JPG", "title": "Fakenews2", "description": "The Spinoff is subject to NZ", "id": 2},
+            { "image": "img3", "title": "Fakenews3", "description": "A US Navy destroyer", "id": 3},
+            { "image": "img4", "title": "Fakenews4", "description": "KUALA LUMPUR, July 13", "id": 4}
+    ]
+}
+
