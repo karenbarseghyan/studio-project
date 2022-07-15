@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import NewsList from '../components/news/NewsList'
 
 const News = () => {
     const [news, setNews] = useState(null);
@@ -15,7 +16,7 @@ const News = () => {
 
     return (
         <div>
-            News
+            {news && <NewsList news={news} title="Latest News" />}
         </div>
     )
 }
