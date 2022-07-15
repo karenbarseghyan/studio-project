@@ -1,10 +1,18 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import NewsList from '../components/news/NewsList'
-import useFetch from '../useFetch'
+import { useDispatch } from 'react-redux'
+import { getNews } from '../actions/news'
+import { useSelector } from 'react-redux'
 
 const News = () => {
-    const { data: news } = useFetch('http://localhost:8000/news')
     const [search, setSearch] = useState("")
+    const dispatch = useDispatch()
+    const news = useSelector((state)=> state.news)
+
+    useEffect(()=>{
+        dispatch(getNews())
+    },[dispatch])
+
     return (
         <div>
             <input type="text" placeholder="Search..." onChange={e=>setSearch(e.target.value)}/>
