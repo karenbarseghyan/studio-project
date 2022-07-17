@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import NewsList from '../components/news/NewsList'
+import NewsList from './NewsList'
 import { useDispatch } from 'react-redux'
-import { getNews } from '../actions/news'
+import { getNews } from '../../actions/news'
 import { useSelector } from 'react-redux'
 
 const News = () => {
