@@ -1,0 +1,22 @@
+*{margin: 0; padding: 0;}
+
+.navigationBar {
+    font-weight: 500;
+    background-color: #02004e;
+    height: 4s0px;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: start;
+}
+
+nav a.active {
+    font-weight: bolder;
+    /* color: #ffa70b; */
+}
+
+.navigationLink {
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    margin-right: 16px;
+}
