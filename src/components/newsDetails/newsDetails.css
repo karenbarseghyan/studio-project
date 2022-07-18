@@ -1,0 +1,30 @@
+.newsDetailsContainer {
+    margin: auto;
+    padding: 32px;
+    background-color: rgb(245, 236, 236);
+}
+
+.newsDetailsTitle {
+    text-align: center;
+    color: black;
+    font-size: 42px;
+    margin: 24px 0;
+}
+
+
+
+.newsItemImage {
+    display: block;
+    width: cacl(100%-100px);
+    margin: auto;
+    height: 50vh;
+}
+
+.newsDetailsDesc {
+    margin-top: 24px;
+}
+
+.longDescStyle {
+    line-height: 1.5;
+    margin-top: 12px;
+}
