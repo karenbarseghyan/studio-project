@@ -1,10 +1,10 @@
-import { Route, Routes }  from "react-router-dom"
-import NewsDetails from "./components/news/NewsDetails";
-import Navbar from "./Navbar";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import News from "./pages/News";
-import Profile from "./pages/Profile";
+import { Route, Routes, useParams }  from "react-router-dom"
+import NewsDetails from "./components/newsDetails/NewsDetails";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import Login from "./components/Login/Login";
+import News from "./components/News/News";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
