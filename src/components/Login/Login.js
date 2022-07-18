@@ -37,8 +37,8 @@ const Log = () => {
                     {!isHaveRights && <p>Sorry, we don't recognize your credentials</p>}
                 </div>
                 <form className="login-form" onSubmit={handleSubmit}>
-                    <input type="text" name = "username" placeholder="username" onChange={handleChange} required />
-                    <input type="password" name = "password" placeholder="password" onChange={handleChange} required />
+                    <input type="text" name = "username" placeholder="username" onChange={handleChange} autoComplete="off" required />
+                    <input type="password" name = "password" placeholder="password" onChange={handleChange} autoComplete="off" required />
                     <button>Login</button>
                 </form>
                
