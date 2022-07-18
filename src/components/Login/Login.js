@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import './login.css'
+import { useNavigate } from 'react-router-dom'
+import { logIn } from '../../actions/auth'
+import { useDispatch } from 'react-redux'
 import { isCredentialsCorrect } from '../../utils/IsCreadentialsCorrect'
 
 const initialState = {username:'', password:''}
@@ -9,8 +12,12 @@ const Log = () => {
     const [formData, setFormData] = useState(initialState)
     const [isHaveRights, setHaveRights] = useState(true)
 
+    const navigate = useNavigate();
+    const dispatch = useDispatch()
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        dispatch(logIn(formData, navigate))
         console.log(formData)
         let isHaveRights  = isCredentialsCorrect(formData);
         setHaveRights(isHaveRights)
@@ -19,7 +26,7 @@ const Log = () => {
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value})
     }
-    console.log(isHaveRights, 'ppppp')
+
     return (
 
         <div className="body">
