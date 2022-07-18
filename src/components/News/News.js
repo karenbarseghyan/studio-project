@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
-import NewsList from './NewsList'
+import NewsList from '../newsList/newsList'
 import { useDispatch } from 'react-redux'
 import { getNews } from '../../actions/news'
 import { useSelector } from 'react-redux'
+import './news.css'
 
 const News = () => {
     const [search, setSearch] = useState("")
@@ -14,9 +15,10 @@ const News = () => {
     },[dispatch])
 
     return (
-        <div>
-            <input type="text" placeholder="Search..." onChange={e=>setSearch(e.target.value)}/>
-            {news && <NewsList news={news} search={search} title="Latest News" />}
+        <div className='newContainer'>
+            <input className="searchBar" type="text" placeholder="Search news..." onChange={e=>setSearch(e.target.value)}/>
+            <h2 className='newsTitle'>News list</h2>
+             {news && <NewsList newsList={news} search={search}/>}
         </div>
     )
 }
