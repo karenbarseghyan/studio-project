@@ -16,6 +16,8 @@ You may also see any lint errors in the console.
 
 ### `npx json-server --watch database/db.json --port 8000`
 Runs the app for back-end.\
+Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
