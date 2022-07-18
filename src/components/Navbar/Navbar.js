@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import './navbar.css'
 
 const Navbar = () => {
     return (
         <nav className="navigationBar">
             <NavLink to ="/" className="navigationLink"> 
-                <img src='https://www.studio-one.am/resources/studio/css/images/logo.svg' className='logoStyle'/>
+                <img src='https://www.studio-one.am/resources/studio/css/images/logo.svg' alt="studio" className='logoStyle'/>
             </NavLink>
             <div>
                 <NavLink to ="/" className="navigationLink"> Home </NavLink>
