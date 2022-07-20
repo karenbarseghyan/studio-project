@@ -1,10 +1,7 @@
-import { AUTH } from '../constants/actionTypes';
-import { isCredentialsCorrect } from '../utils/IsCreadentialsCorrect';
+import { AUTH } from "../constants/actionTypes";
 
-export const logIn = (formData, navigate) => async(dispatch) =>  {
-    const isHaveRights = isCredentialsCorrect(formData)
-    if(isHaveRights){
-        dispatch({type: AUTH, payload: true})
-        navigate('/profile');
+export const auth = () => async(dispatch) =>  {
+    if(localStorage.getItem("token")){
+        dispatch({type: AUTH, payload: true});
     }
 }

@@ -4,18 +4,18 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 const Profile = () => {
-
-    const auth = useSelector((state)=> state.auth)
+    const login = useSelector((state)=> state.login);
+    const authenticate = useSelector((state)=> state.auth);
     let navigate = useNavigate();
     useEffect(() => {
-        if (!auth){
+        if (!login && !authenticate){
            return navigate("/login");
         }
-     },[auth]);
+     },[login, authenticate]);
     
     return (
         <div>
-            {auth && 
+            {(login || authenticate) && 
             <div className='profileContainer'>
                 <h1>Profile</h1>
                 <h2>You are authorized user</h2>           

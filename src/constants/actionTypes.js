@@ -1,3 +1,4 @@
 export const FETCH_ALL = 'FETCH_ALL'
-export const AUTH = 'AUTH'
+export const LOGIN = 'LOGIN'
 export const FETCH_ONE = 'FETCH_ONE'
+export const AUTH = 'AUTH'

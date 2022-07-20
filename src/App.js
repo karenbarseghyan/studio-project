@@ -5,10 +5,16 @@ import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
 import News from "./components/News/News";
 import Profile from "./components/Profile/Profile";
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from "react";
+import { auth } from "./actions/auth";
 
 function App() {
-  const auth = useSelector((state)=> state.auth)
+  const login = useSelector((state)=> state.login)
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(auth());
+  })
   return (
     <div>
       <Navbar />

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './login.css'
 import { useNavigate } from 'react-router-dom'
-import { logIn } from '../../actions/auth'
+import { logIn } from '../../actions/login'
 import { useDispatch } from 'react-redux'
 import { isCredentialsCorrect } from '../../utils/IsCreadentialsCorrect'
 
