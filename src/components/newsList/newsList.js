@@ -1,16 +1,27 @@
 import NewsItem from "../newsItem/NewsItem";
-import { useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './newsList.css'
 
 const NewsList = ({newsList, search}) => {
-    const {id} = useParams()
+    
+    const navigate = useNavigate();
+    const openNews = () => {
+        console.log("newsssList", newsList)
+        navigate(`./news/${newsList.id}`)
+        
+    }
+     
     return (
         <div className='newsListWrapper'>
+            {newsList.map(({title, id})=>(
+                <NewsItem key={id} onClick={openNews} />
+            ))}
            {newsList.length > 0 && newsList.filter((news)=>news.title.toLowerCase()
            .includes(search))
            .map(({image, title, description, id})=> (
                 <div  key={id}> 
-                    <NewsItem 
+                    <NewsItem
+                        onClick={openNews}
                         id={id}
                         image={image}
                         title={title}
